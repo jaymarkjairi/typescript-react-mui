@@ -1,5 +1,5 @@
 import {Component, Fragment} from 'react';
-import Exercises from './Exercises';
+import Exercises from '../Views/Execises';
 import {Header, Footer} from './Layouts';
 
 export default class extends Component {
