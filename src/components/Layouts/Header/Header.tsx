@@ -16,7 +16,7 @@ import {
   AccountCircle,
   MoreIcon,
 } from '../../icons/index';
-// import AppBarBadge from './AppBarBadge';
+import HeaderNotification from './HeaderNotification';
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -61,18 +61,6 @@ const Header = () => {
       name: 'Logout',
     },
   ];
-
-  const renderNotification = (
-    <IconButton
-      size="large"
-      aria-label="show 17 new notifications"
-      color="inherit"
-    >
-      <Badge badgeContent={17} color="error">
-        <NotificationsIcon />
-      </Badge>
-    </IconButton>
-  );
 
   const renderAccountCircle = (
     <IconButton
@@ -129,7 +117,7 @@ const Header = () => {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        {renderNotification}
+        <HeaderNotification />
         <p>Messages</p>
       </MenuItem>
       <MenuItem>
@@ -164,7 +152,7 @@ const Header = () => {
           {/*this will send the icons to the right portion of the appbar */}
           <Box sx={{flexGrow: 1}} />
           <Box sx={{display: {xs: 'none', md: 'flex'}}}>
-            {renderNotification}
+            <HeaderNotification />
             {renderAccountCircle}
           </Box>
           <Box sx={{display: {xs: 'flex', md: 'none'}}}>

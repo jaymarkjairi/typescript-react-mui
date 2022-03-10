@@ -1,7 +1,7 @@
 import {Badge, IconButton} from '@mui/material';
 import {NotificationsIcon} from '../../icons';
 
-const AppBarBadge = () => {
+const HeaderNotification = () => {
   return (
     <IconButton
       size="large"
@@ -14,4 +14,4 @@ const AppBarBadge = () => {
     </IconButton>
   );
 };
-export default AppBarBadge;
+export default HeaderNotification;
